@@ -12,3 +12,10 @@
 .text-green {
   color: green;
 }
+
+@media (max-width: 699px) {
+  .title-welcome {
+    font-size: 47px;
+  }
+
+}
