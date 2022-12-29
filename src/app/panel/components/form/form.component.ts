@@ -67,7 +67,6 @@ export class FormComponent implements OnInit {
   }
 
   onSendForm() {
-    console.log(this.form.value)
     if ( this.form.invalid ) {
       this.messageAlert.onOpendialogMessage(
         {

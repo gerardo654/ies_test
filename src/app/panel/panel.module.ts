@@ -23,10 +23,10 @@ import {SharedModule} from "../core/shared/shared.module";
     CalculateComponent,
     FormComponent
   ],
-    imports: [
-        CommonModule,
-        PanelRoutingModule,
-        SharedModule
-    ]
+  imports: [
+      CommonModule,
+      PanelRoutingModule,
+      SharedModule
+  ]
 })
 export class PanelModule { }
