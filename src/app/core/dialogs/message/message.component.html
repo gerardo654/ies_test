@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="align-items-center
+        justify-content-center row"
+       [ngClass]="{'text-success': data.type === 'success',
+                      'text-danger' : data.type === 'error',
+                      'text-info' : data.type === 'info'}">
+      <mat-icon *ngIf="data.type === 'success'">check_circle</mat-icon>
+      <mat-icon *ngIf="data.type === 'error'">error</mat-icon>
+      <mat-icon *ngIf="data.type === 'info'">info</mat-icon>
+  </div>
+
+  <div class="align-items-center
+        justify-content-center row">
+    <span class="text-center mt-3 p-3"
+          [ngClass]="{'text-success': data.type === 'success',
+                      'text-danger' : data.type === 'error',
+                      'text-info' : data.type === 'info'}">
+      {{data.message}}
+    </span>
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+.back_container {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../../assets/img/back_calculate.jpg");
+  flex-flow: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center space-between;
+  align-items: flex-start;
+}
+.title-welcome {
+  font-size: 69px;
+}
+.date {
+  font-size: 40px;
+}
+.text-green {
+  color: green;
+}
+
+@media (max-width: 689px) {
+  .title-welcome {
+    font-size: 40px;
+  }
+}

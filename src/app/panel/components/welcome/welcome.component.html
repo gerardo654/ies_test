@@ -1,0 +1,20 @@
+<div class="back_container align-items-center  justify-content-center row">
+
+  <div  class="col-10
+        align-items-center
+        justify-content-center row">
+
+    <span class="title-welcome text-center">
+      <span class="text-white">Bienvenido a </span> <span class="text-green">mi portal.</span>
+    </span>
+
+    <span class="subtitle-welcome  text-center">Nos podrías indicar tu nombre.</span>
+
+    <button class="text-center text-white custom-button p-2 mt-4" (click)="onOpenDialog()">Escribe tu nombre</button>
+
+
+    <span class="subtitle-welcome text-center mt-4">{{ nombre | cambioLetras: 'gola'}}</span>
+
+  </div>
+
+</div>

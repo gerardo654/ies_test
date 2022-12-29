@@ -1,0 +1,24 @@
+.back_container {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../../assets/img/back_welcome.jpg");
+}
+.title-welcome {
+  font-size: 69px;
+}
+.text-green {
+  color: green;
+}
+.subtitle-welcome {
+  font-size: 32px;
+  color: white;
+}
+.custom-button {
+  border-radius: 34px;
+  border: 4px solid white;
+  background-color: transparent;
+  width: 15%;
+}

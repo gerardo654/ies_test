@@ -1,0 +1,47 @@
+<div class="back_container p-4">
+
+  <div  class="col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 ">
+    <span class="text-white title-welcome text-center">Conver</span> <span class="text-green  title-welcome ">siones</span>
+
+    <form class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-5
+        align-items-center
+        justify-content-center row" (ngSubmit)="calculate()" [formGroup]="formCalculate">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Selecciona una fecha</mat-label>
+        <input matInput [matDatepicker]="dp" formControlName="date">
+        <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker #dp></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Selecciona la unidad</mat-label>
+        <mat-select  formControlName="unity">
+          <mat-option *ngFor="let type of typesCalculate" [value]="type.id">
+            {{type.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error>Seleccione una unidad</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Ingresa la cantidad a sumar</mat-label>
+        <input matInput placeholder="Ex. 1,2,3" type="number" formControlName="value">
+        <mat-error>Ingrese un valor válido</mat-error>
+      </mat-form-field>
+
+      <button mat-button type="submit">Calcular</button>
+
+    </form>
+
+  </div>
+
+  <div class="text-white align-items-end
+        col-12
+        justify-content-end row">
+    <div class="col-12 col-sm-10 col-md-4 col-lg-4 col-xl-4 date">
+      {{dateResult | date:'dd MMM YYYY'}}
+    </div>
+  </div>
+
+</div>

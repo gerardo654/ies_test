@@ -1,0 +1,30 @@
+<div class="back_container align-items-center  justify-content-center row">
+
+  <form class="col-11 col-sm-8 col-md-8 col-lg-6 col-xl-5 p-4
+        align-items-center
+        justify-content-center row"
+        (ngSubmit)="onLogin()"
+        [formGroup]="formlogin">
+
+    <h2 class="text-center">Login</h2>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre de usuario</mat-label>
+      <input matInput formControlName="username">
+      <mat-error>Nombre de usuario inválido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error>Contraseña inválida</mat-error>
+    </mat-form-field>
+
+    <button mat-button type="submit">Sign in</button>
+
+  </form>
+
+</div>

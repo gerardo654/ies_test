@@ -1,0 +1,14 @@
+.back_container {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../../assets/img/back_convertions.jpg");
+}
+.title-welcome {
+  font-size: 69px;
+}
+.text-green {
+  color: green;
+}

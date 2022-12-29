@@ -1,0 +1,83 @@
+<div class="back_container align-items-center  justify-content-center row">
+
+  <div  class="col-10
+        align-items-center
+        justify-content-center row">
+
+    <span class="title-welcome text-center">
+      <span class="text-white">Form</span> <span class="text-green">ulario</span>
+    </span>
+
+    <form class="col-6 p-5
+        align-items-center
+        justify-content-center row" (ngSubmit)="onSendForm()" [formGroup]="form">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Nombres</mat-label>
+        <input matInput formControlName="nombres">
+        <mat-error *ngIf="form.get('nombres')?.hasError('required')">Ingrese un valor</mat-error>
+        <mat-error *ngIf="form.get('nombres')?.hasError('pattern')">Tiene un espacio al final</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Apellidos</mat-label>
+        <input matInput formControlName="apellidos">
+        <mat-error *ngIf="form.get('apellidos')?.hasError('required')">Ingrese un valor</mat-error>
+        <mat-error *ngIf="form.get('apellidos')?.hasError('pattern')">Tiene un espacio al final</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>¿Fumas?</mat-label>
+        <mat-select  formControlName="fumas">
+          <mat-option [value]="true"> Sí </mat-option>
+          <mat-option [value]="false"> No </mat-option>
+        </mat-select>
+        <mat-error>Seleccione una opción</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>¿Actualmente practicas lectura?</mat-label>
+        <mat-select  formControlName="actualmentePracticasLectura" (selectionChange)="onChange($event.value)">
+          <mat-option [value]="true"> Sí </mat-option>
+          <mat-option [value]="false"> No </mat-option>
+        </mat-select>
+        <mat-error>Seleccione una opción</mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field class="example-chip-list" appearance="outline" *ngIf="isShowAddLybrarys">
+        <mat-label>Libros leidos en los últimos tres meses</mat-label>
+        <mat-chip-list #chipList aria-label="Video keywords" multiple formControlName="librosLeidosUltimosTresMeses">
+          <mat-chip
+            *ngFor="let keyword of keywords"
+            [selected]="keyword"
+            [value]="keyword"
+            (removed)="removeKeyword(keyword)">
+            {{keyword}}
+          </mat-chip>
+          <input
+            placeholder="Nuevo libro..."
+            [matChipInputFor]="chipList"
+            (matChipInputTokenEnd)="addKeywordFromInput($event)">
+        </mat-chip-list>
+        <mat-hint>Escriba y presiona enter para agregar un nuevo libro</mat-hint>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline">
+        <mat-label>Estado civil</mat-label>
+        <mat-select  formControlName="estadoCivil">
+          <mat-option *ngFor="let state of estates" [value]="state.id"> {{state.name}} </mat-option>
+        </mat-select>
+        <mat-error>Seleccione una opción</mat-error>
+      </mat-form-field>
+
+
+
+      <button mat-button type="submit">Enviar</button>
+
+    </form>
+
+  </div>
+
+</div>
