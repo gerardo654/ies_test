@@ -22,3 +22,16 @@
   background-color: transparent;
   width: 15%;
 }
+
+@media (max-width: 690px) {
+  .custom-button {
+    width: 57%;
+  }
+  .title-welcome {
+    font-size: 47px;
+  }
+  .subtitle-welcome {
+    font-size: 24px;
+  }
+}
+

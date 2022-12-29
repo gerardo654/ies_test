@@ -27,6 +27,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {MatChipsModule} from '@angular/material/chips';
     HttpClientModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatChipsModule
+    MatChipsModule,
+    MatToolbarModule
   ],
   exports: [
     MatButtonModule,
@@ -66,7 +68,8 @@ import {MatChipsModule} from '@angular/material/chips';
     NamePipe,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatChipsModule
+    MatChipsModule,
+    MatToolbarModule
   ],
   providers: [
     MatDatepickerModule,

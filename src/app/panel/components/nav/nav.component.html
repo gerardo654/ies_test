@@ -1,5 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="/principal/welcome" routerLinkActive="active">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -17,3 +20,41 @@
     </ul>
   </div>
 </nav>
+
+
+
+<mat-toolbar class="row">
+  <button mat-icon-button routerLink="/principal/welcome" routerLinkActive="active">
+    <div class="column_custom">
+      <mat-icon>home</mat-icon>
+      <span class="text-center">Home</span>
+    </div>
+  </button>
+
+  <button mat-icon-button routerLink="/principal/convertions" routerLinkActive="active">
+    <div class="column_custom">
+    <mat-icon>cached</mat-icon>
+      <span class="text-center">Conversiones</span>
+    </div>
+  </button>
+
+  <button mat-icon-button routerLink="/principal/calculate" routerLinkActive="active">
+    <div class="column_custom">
+      <mat-icon>hourglass_empty</mat-icon>
+      <span class="text-center">Calcular fecha</span>
+    </div>
+  </button>
+  <button mat-icon-button routerLink="/principal/form" routerLinkActive="active">
+    <div class="column_custom">
+      <mat-icon>receipt</mat-icon>
+      <span class="text-center">Formulario</span>
+    </div>
+  </button>
+
+  <button mat-icon-button (click)="onClose()">
+    <div class="column_custom">
+      <mat-icon>undo</mat-icon>
+      <span class="text-center">Cerrar sesión</span>
+    </div>
+  </button>
+</mat-toolbar>

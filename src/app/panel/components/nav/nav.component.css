@@ -1,0 +1,32 @@
+mat-toolbar {
+  display: none;
+}
+.column_custom {
+  flex-flow: column;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+button {
+  margin-right: 4rem;
+}
+
+@media (max-width: 991px) {
+  mat-toolbar {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 690px) {
+  span {
+    display: none;
+  }
+  button {
+    margin-right: 1rem;
+  }
+}
+
